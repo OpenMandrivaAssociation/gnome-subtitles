@@ -14,6 +14,7 @@ License:	GPLv2+
 Group:		Video
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	gnome-doc-utils
+BuildRequires:	gtk+2-devel
 BuildRequires:	mono-devel
 BuildRequires:	gtk-sharp2
 BuildRequires:	glade-sharp2
@@ -59,6 +60,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
+%doc AUTHORS CREDITS NEWS TODO
 %{_sysconfdir}/gconf/schemas/%{name}.schemas
 %{_bindir}/%{name}
 %{_libdir}/%{name}
