@@ -1,7 +1,7 @@
 
 %define name	gnome-subtitles
 %define version	0.6
-%define rel	1
+%define rel	2
 
 Summary:	Subtitle editor for the GNOME desktop
 Name:		%{name}
@@ -19,7 +19,7 @@ BuildRequires:	mono-devel
 BuildRequires:	gtk-sharp2
 BuildRequires:	glade-sharp2
 BuildRequires:	gnome-sharp2
-BuildRequires:	imagemagick
+BuildRequires:	ImageMagick
 Suggests:	mplayer
 
 %description
