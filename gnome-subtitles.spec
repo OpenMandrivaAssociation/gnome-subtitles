@@ -1,7 +1,7 @@
 
 %define name	gnome-subtitles
 %define version	0.6
-%define rel	2
+%define rel	3
 
 Summary:	Subtitle editor for the GNOME desktop
 Name:		%{name}
@@ -38,7 +38,13 @@ subtitle editing, translation and synchronization.
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+%if %{mdkversion} <= 200710
+# (anssi) 10/2007 TODO: What is this and why only on <= 2007.1 ?
+rm -rf %{buildroot}%{_localstatedir}/scrollkeeper
+%find_lang %{name}
+%else
 %find_lang --with-gnome %{name}
+%endif
 
 install -d -m755 %{buildroot}{%{_iconsdir},%{_liconsdir},%{_miconsdir}}
 convert data/%{name}.png -resize 48x48 %{buildroot}%{_liconsdir}/%{name}.png
@@ -70,6 +76,16 @@ rm -rf %{buildroot}
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_mandir}/man1/%{name}.1*
+%if %{mdkversion} <= 200710
+%doc %dir %{_datadir}/gnome/help/%{name}
+%doc %dir %{_datadir}/gnome/help/%{name}/C
+%doc %{_datadir}/gnome/help/%{name}/C/%{name}.xml
+%doc %{_datadir}/gnome/help/%{name}/C/legal.xml
+%doc %dir %lang(ca) %{_datadir}/gnome/help/%{name}/ca
+%doc %lang(ca) %{_datadir}/gnome/help/%{name}/ca/%{name}.xml
+%doc %dir %lang(sv) %{_datadir}/gnome/help/%{name}/sv
+%doc %lang(sv) %{_datadir}/gnome/help/%{name}/sv/%{name}.xml
+%endif
 # FIXME: someone else should own this:
 %dir %{_datadir}/omf
 %dir %{_datadir}/omf/%{name}
