@@ -20,7 +20,7 @@ BuildRequires:	gtk-sharp2
 BuildRequires:	glade-sharp2
 BuildRequires:	gnome-sharp2
 BuildRequires:	ImageMagick
-BuildRequires:	gstreamer0.10-devel
+BuildRequires:	libgstreamer0.10-devel
 Suggests:	mplayer
 
 %description
