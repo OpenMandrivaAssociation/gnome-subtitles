@@ -67,7 +67,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS CREDITS NEWS TODO
+%doc AUTHORS CREDITS NEWS
 %{_sysconfdir}/gconf/schemas/%{name}.schemas
 %{_bindir}/%{name}
 %{_libdir}/%{name}
