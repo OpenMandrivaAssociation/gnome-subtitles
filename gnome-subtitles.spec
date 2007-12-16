@@ -94,3 +94,5 @@ rm -rf %{buildroot}
 %{_datadir}/omf/%{name}/%{name}-C.omf
 %lang(ca) %{_datadir}/omf/%{name}/%{name}-ca.omf
 %lang(sv) %{_datadir}/omf/%{name}/%{name}-sv.omf
+%lang(el) %{_datadir}/omf/%{name}/%{name}-el.omf
+%lang(oc) %{_datadir}/omf/%{name}/%{name}-oc.omf
