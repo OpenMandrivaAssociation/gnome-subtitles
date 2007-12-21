@@ -12,6 +12,7 @@ Source:		http://kent.dl.sourceforge.net/sourceforge/gnome-subtitles/%name-%versi
 Patch0:		gnome-subtitles-desktop.patch
 License:	GPLv2+
 Group:		Video
+BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	gnome-doc-utils
 BuildRequires:	gtk+2-devel
 BuildRequires:	mono-devel
