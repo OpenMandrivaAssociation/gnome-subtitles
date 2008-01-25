@@ -34,7 +34,8 @@ subtitle editing, translation and synchronization.
 
 %build
 %configure2_5x
-%make
+# parallel build broken as of 0.7.1, 01/2008
+make
 
 %install
 rm -rf %{buildroot}
