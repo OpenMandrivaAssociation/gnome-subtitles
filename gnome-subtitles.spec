@@ -1,7 +1,7 @@
 
 %define name	gnome-subtitles
 %define version	0.7.1
-%define rel	1
+%define rel	2
 
 Summary:	Subtitle editor for the GNOME desktop
 Name:		%{name}
@@ -21,7 +21,7 @@ BuildRequires:	glade-sharp2
 BuildRequires:	gnome-sharp2
 BuildRequires:	ImageMagick
 BuildRequires:	libgstreamer0.10-plugins-base-devel
-Suggests:	mplayer
+Suggests:	gstreamer0.10-decoders
 
 %description
 Gnome Subtitles is a subtitle editor for the GNOME desktop. It
