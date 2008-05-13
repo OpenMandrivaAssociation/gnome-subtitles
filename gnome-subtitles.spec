@@ -16,9 +16,7 @@ BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	gnome-doc-utils
 BuildRequires:	gtk+2-devel
 BuildRequires:	mono-devel
-BuildRequires:	gtk-sharp2
-BuildRequires:	glade-sharp2
-BuildRequires:	gnome-sharp2
+BuildRequires:	gnome-sharp2-devel
 BuildRequires:	ImageMagick
 BuildRequires:	libgstreamer0.10-plugins-base-devel
 Suggests:	gstreamer0.10-decoders
