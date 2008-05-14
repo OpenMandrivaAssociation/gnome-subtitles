@@ -96,6 +96,6 @@ rm -rf %{buildroot}
 %lang(ca) %{_datadir}/omf/%{name}/%{name}-ca.omf
 %lang(sv) %{_datadir}/omf/%{name}/%{name}-sv.omf
 %lang(el) %{_datadir}/omf/%{name}/%{name}-el.omf
-%lang(es) %{_datadir}/omf/%{name}/%{_name}-es.omf
+%lang(es) %{_datadir}/omf/%{name}/%{name}-es.omf
 %lang(oc) %{_datadir}/omf/%{name}/%{name}-oc.omf
 %lang(fr) %{_datadir}/omf/%{name}/%{name}-fr.omf
