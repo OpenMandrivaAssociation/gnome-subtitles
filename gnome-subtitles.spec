@@ -42,7 +42,7 @@ rm -rf %{buildroot}
 %makeinstall_std
 %if %{mdkversion} <= 200710
 # (anssi) 10/2007 TODO: What is this and why only on <= 2007.1 ?
-rm -rf %{buildroot}%{_localstatedir}/scrollkeeper
+rm -rf %{buildroot}%{_localstatedir}/lib/scrollkeeper
 %find_lang %{name}
 %else
 %find_lang --with-gnome %{name}
