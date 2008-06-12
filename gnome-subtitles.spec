@@ -56,15 +56,19 @@ convert data/%{name}.png -resize 16x16 %{buildroot}%{_miconsdir}/%{name}.png
 %clean
 rm -rf %{buildroot}
 
+%if %mdkversion < 200900
 %post
 %post_install_gconf_schemas %{name}
 %{update_menus}
+%endif
 
 %preun
 %preun_uninstall_gconf_schemas %{name}
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
+%endif
 
 %files -f %{name}.lang
 %defattr(-,root,root)
