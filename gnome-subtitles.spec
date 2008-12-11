@@ -18,7 +18,7 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	mono-devel
 BuildRequires:	pkgconfig(glade-sharp-2.0)
 BuildRequires:	gnome-sharp2-devel
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 BuildRequires:	libgstreamer0.10-plugins-base-devel
 BuildRequires:	sublib-devel
 Suggests:	gstreamer0.10-decoders
