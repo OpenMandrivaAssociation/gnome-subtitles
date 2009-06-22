@@ -1,7 +1,7 @@
 
 %define name	gnome-subtitles
-%define version	0.8
-%define rel	2
+%define version	0.9
+%define rel	1
 
 Summary:	Subtitle editor for the GNOME desktop
 Name:		%{name}
@@ -9,7 +9,8 @@ Version:	%{version}
 Release:	%mkrel %{rel}
 URL:		http://gnome-subtitles.sourceforge.net/
 Source:		http://kent.dl.sourceforge.net/sourceforge/gnome-subtitles/%name-%version.tar.gz
-Patch0:		gnome-subtitles-desktop.patch
+Patch0:		gnome-subtitles-0.9-destktop.patch
+Patch1:		gnome-subtitles-0.9-linkage.patch
 License:	GPLv2+
 Group:		Video
 BuildRoot:	%{_tmppath}/%{name}-root
@@ -19,6 +20,7 @@ BuildRequires:	mono-devel
 BuildRequires:	pkgconfig(glade-sharp-2.0)
 BuildRequires:	gnome-sharp2-devel
 BuildRequires:	imagemagick
+BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libgstreamer0.10-plugins-base-devel
 BuildRequires:	sublib-devel
 Suggests:	gstreamer0.10-decoders
@@ -30,23 +32,18 @@ subtitle editing, translation and synchronization.
 
 %prep
 %setup -q
-#%patch0 -p1
+%patch0 -p1
+%patch1 -p0
 
 %build
 %configure2_5x
-# parallel build broken as of 0.7.1, 01/2008
-make
+%make
 
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-%if %{mdkversion} <= 200710
-# (anssi) 10/2007 TODO: What is this and why only on <= 2007.1 ?
-rm -rf %{buildroot}%{_localstatedir}/lib/scrollkeeper
-%find_lang %{name}
-%else
+
 %find_lang --with-gnome %{name}
-%endif
 
 install -d -m755 %{buildroot}{%{_iconsdir},%{_liconsdir},%{_miconsdir}}
 convert data/%{name}.png -resize 48x48 %{buildroot}%{_liconsdir}/%{name}.png
@@ -72,7 +69,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS CREDITS NEWS
+%doc AUTHORS NEWS
 %{_sysconfdir}/gconf/schemas/%{name}.schemas
 %{_bindir}/%{name}
 %{_libdir}/%{name}
@@ -98,6 +95,7 @@ rm -rf %{buildroot}
 # TODO: add omf handling into find_lang.pl:
 %{_datadir}/omf/%{name}/%{name}-C.omf
 %lang(ca) %{_datadir}/omf/%{name}/%{name}-ca.omf
+%lang(de) %{_datadir}/omf/%{name}/%{name}-de.omf
 %lang(sv) %{_datadir}/omf/%{name}/%{name}-sv.omf
 %lang(el) %{_datadir}/omf/%{name}/%{name}-el.omf
 %lang(es) %{_datadir}/omf/%{name}/%{name}-es.omf
