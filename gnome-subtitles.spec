@@ -1,6 +1,6 @@
 
 %define name	gnome-subtitles
-%define version	0.9
+%define version	0.9.1
 %define rel	1
 
 Summary:	Subtitle editor for the GNOME desktop
