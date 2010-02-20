@@ -1,6 +1,6 @@
 
 %define name	gnome-subtitles
-%define version	0.9.1
+%define version	1.0
 %define rel	1
 
 Summary:	Subtitle editor for the GNOME desktop
@@ -10,7 +10,6 @@ Release:	%mkrel %{rel}
 URL:		http://gnome-subtitles.sourceforge.net/
 Source:		http://kent.dl.sourceforge.net/sourceforge/gnome-subtitles/%name-%version.tar.gz
 Patch0:		gnome-subtitles-0.9-destktop.patch
-Patch1:		gnome-subtitles-0.9-linkage.patch
 License:	GPLv2+
 Group:		Video
 BuildRoot:	%{_tmppath}/%{name}-root
@@ -33,7 +32,6 @@ subtitle editing, translation and synchronization.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p0
 
 %build
 %configure2_5x
