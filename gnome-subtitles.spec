@@ -1,6 +1,6 @@
 
 %define name	gnome-subtitles
-%define version	1.0
+%define version	1.1
 %define rel	1
 
 Summary:	Subtitle editor for the GNOME desktop
@@ -99,3 +99,6 @@ rm -rf %{buildroot}
 %lang(es) %{_datadir}/omf/%{name}/%{name}-es.omf
 %lang(oc) %{_datadir}/omf/%{name}/%{name}-oc.omf
 %lang(fr) %{_datadir}/omf/%{name}/%{name}-fr.omf
+%lang(cs) %{_datadir}/omf/%{name}/%{name}-cs.omf
+%lang(ro) %{_datadir}/omf/%{name}/%{name}-ro.omf
+%lang(sl) %{_datadir}/omf/%{name}/%{name}-sl.omf
