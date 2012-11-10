@@ -1,0 +1,22 @@
+--- gnome-subtitles-0.9/data/gnome-subtitles.desktop.in~	2009-05-23 12:47:35.000000000 +0200
++++ gnome-subtitles-0.9/data/gnome-subtitles.desktop.in	2009-06-22 04:07:48.000000000 +0200
+@@ -5,7 +5,7 @@
+ Comment=Video subtitling for the GNOME desktop
+ TryExec=gnome-subtitles
+ Exec=gnome-subtitles %f
+-Icon=gnome-subtitles.png
++Icon=gnome-subtitles
+ StartupNotify=true
+ Terminal=false
+ Type=Application
+--- gnome-subtitles-0.9/data/gnome-subtitles.desktop~	2009-06-22 00:08:31.000000000 +0200
++++ gnome-subtitles-0.9/data/gnome-subtitles.desktop	2009-06-22 04:07:57.000000000 +0200
+@@ -5,7 +5,7 @@
+ Comment=Video subtitling for the GNOME desktop
+ TryExec=gnome-subtitles
+ Exec=gnome-subtitles %f
+-Icon=gnome-subtitles.png
++Icon=gnome-subtitles
+ StartupNotify=true
+ Terminal=false
+ Type=Application
