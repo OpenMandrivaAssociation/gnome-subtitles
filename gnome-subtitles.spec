@@ -13,6 +13,11 @@ Patch0:		gnome-subtitles-0.9-destktop.patch
 License:	GPLv2+
 Group:		Video
 BuildRoot:	%{_tmppath}/%{name}-root
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gnome-doc-utils
 BuildRequires:	gtk+2-devel
 BuildRequires:	mono-devel
